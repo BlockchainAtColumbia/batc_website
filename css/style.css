@@ -3,13 +3,13 @@
 /*---------------------------------- */
 
 /**
-	Gorge - Portfolio Template 
+	Gorge - Portfolio Template
 	Author : Tavonline
 	Copyright 2018
 
 /* Table of Content
 ==================================================
-	
+
 	1. Body and Core Css
 	2. Home Page
      2.1 Portfolio Section
@@ -83,19 +83,19 @@ header{
   0% {
     transform: rotate(0deg);
   }
-  
+
   25% {
     transform: rotate(180deg);
   }
-  
+
   50% {
     transform: rotate(180deg);
   }
-  
+
   75% {
     transform: rotate(360deg);
   }
-  
+
   100% {
     transform: rotate(360deg);
   }
@@ -105,19 +105,19 @@ header{
   0% {
     height: 0%;
   }
-  
+
   25% {
     height: 0%;
   }
-  
+
   50% {
     height: 100%;
   }
-  
+
   75% {
     height: 100%;
   }
-  
+
   100% {
     height: 0%;
   }
@@ -150,23 +150,23 @@ header{
 }
 
 .padding_30{
-   padding: 30px 0; 
+   padding: 30px 0;
 }
 
 .padding_45{
-   padding: 45px 0; 
+   padding: 45px 0;
 }
 
 .padding_60{
-   padding: 60px 0; 
+   padding: 60px 0;
 }
 
 .padding_90{
-   padding: 90px 0; 
+   padding: 90px 0;
 }
 
 .padding_120{
-   padding: 120px 0; 
+   padding: 120px 0;
 }
 
 .bottom_15{
@@ -348,7 +348,7 @@ header{
     float: left;
     margin-right: 15px;
     -webkit-transition: all ease 0.3s;
-    transition: all ease 0.3s;    
+    transition: all ease 0.3s;
     font-weight: 600;
 }
 
@@ -632,12 +632,12 @@ header{
     width: 100%;
     height: 100%;
     display: table;
-    background-size: cover !important;    
+    background-size: cover !important;
     position: relative;
 }
 
 .portfolio-hero:before{
-    height: 100%;    
+    height: 100%;
     background: #00000061;
     position: absolute;
     width: 100%;
@@ -665,7 +665,7 @@ header{
     margin: 20px 0 30px;
 }
 
-.portfolio-hero .hero-inner .information{    
+.portfolio-hero .hero-inner .information{
     font-size: 12.5px;
     font-weight: 400;
     display: inline-block;
@@ -730,7 +730,7 @@ header.white .nav-icon span {
 /* Portfolio Single Type 3 */
 
 .portfolio-single.type-3 .title{
-    font-size: 60px;  
+    font-size: 60px;
     line-height: 65px;
     font-weight: 900;
 }
@@ -738,7 +738,7 @@ header.white .nav-icon span {
 .portfolio-single.type-3 .information{
     margin: 0 auto;
     float: none;
-    display: inline-block;  
+    display: inline-block;
     padding: 0;
     width: auto;
 }
@@ -970,7 +970,7 @@ header.white .nav-icon span {
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
-  transform-origin: left center;    
+  transform-origin: left center;
   width: 60%;
   right: 0 !important;
 }
@@ -978,7 +978,7 @@ header.white .nav-icon span {
 /* Full Menu When Open */
 
 .full-open .nav-icon span {
-    width: 85%; 
+    width: 85%;
 }
 
 .full-open:hover span:nth-child(3){
@@ -1091,7 +1091,7 @@ footer .getintouch strong{
 
 /*------------------------ About Page ------------------------*/
 
-.titlebar{    
+.titlebar{
     padding: 94px 0;
     height: 300px;
     text-align: center;
@@ -1176,6 +1176,25 @@ footer .getintouch strong{
     max-width: 50%;
 }
 
+/*------------------------ Members Page ------------------------*/
+.members-type {
+  width: 100%;
+  text-align: center;
+}
+
+.card-deck {
+  padding: 50px;
+  justify-content: space-evenly;
+}
+
+.card {
+  max-width: 310.5px;
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 600;
+}
 
 /*------------------------ News Page ------------------------*/
 
@@ -1208,7 +1227,7 @@ footer .getintouch strong{
     font-weight: 500;
 }
 
-.news-box p{    
+.news-box p{
     font-size: 15px;
     color: #5f5e5f;
     margin: 18px 0;
@@ -1299,7 +1318,7 @@ footer .getintouch strong{
     border-radius: 12px;
     -webkit-border-radius: 12px;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
-    -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15); 
+    -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
 }
@@ -1310,21 +1329,21 @@ footer .getintouch strong{
     text-align: center;
 }
 
-.article-comments .comment{    
+.article-comments .comment{
     border-bottom: solid 1px #dfdfdf;
     padding-bottom: 30px;
 }
 
-.article-comments .comment:last-child{    
+.article-comments .comment:last-child{
     border: none;
 }
 
-.article-comments .comment.reply{    
+.article-comments .comment.reply{
     padding-left: 60px;
 }
 
 .article-comments .comment figure img{
-    width: 100%;    
+    width: 100%;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
@@ -1361,7 +1380,7 @@ footer .getintouch strong{
     transition: all ease 0.3s;
 }
 
-.article-comments .comment-content .reply:before{    
+.article-comments .comment-content .reply:before{
     content: "\f3e5";
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
@@ -1384,7 +1403,7 @@ footer .getintouch strong{
 
 /*------------------------ Sidebar Widgets ------------------------*/
 
-.widgets-title{    
+.widgets-title{
     font-size: 22px;
     font-weight: 600;
 }
@@ -1450,10 +1469,10 @@ footer .getintouch strong{
     color: #000;
 }
 
-.widget-latest-news ul li span{    
+.widget-latest-news ul li span{
     font-size: 13px;
     color: #b1b1b1;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 
@@ -1467,7 +1486,7 @@ footer .getintouch strong{
     list-style: none;
     border-bottom: solid 1px #dfdfdf;
     font-size: 14px;
-    font-weight: 400;   
+    font-weight: 400;
 }
 
 .widget-categories ul li a{
@@ -1549,14 +1568,14 @@ textarea.form-message{
         font-weight: 500;
     }
 
-    .portfolio .portfolio-filter {    
+    .portfolio .portfolio-filter {
         margin-top: 0;
         margin-bottom: 15px;
         float: left;
-        transform: rotate(0); 
+        transform: rotate(0);
         margin-bottom: 32px;
         margin-left: 5px;
-        position: relative; 
+        position: relative;
         left: 0;
         top: 0;
         z-index: 10;
@@ -1655,7 +1674,7 @@ textarea.form-message{
     .portfolio-single.type-3 .title {
         font-size: 50px;
     }
-  
+
 }
 
 
@@ -1686,7 +1705,7 @@ textarea.form-message{
     header {
         padding: 18px;
     }
-  
+
     .home .home-content .hero-title {
         font-size: 70px;
         line-height: 64px;
@@ -1702,14 +1721,14 @@ textarea.form-message{
         margin-left: 5%;
     }
 
-    .portfolio .portfolio-filter {    
+    .portfolio .portfolio-filter {
         margin-top: 0;
         margin-bottom: 15px;
         float: left;
-        transform: rotate(0); 
+        transform: rotate(0);
         margin-bottom: 32px;
         margin-left: 5px;
-        position: relative; 
+        position: relative;
         left: 0;
         top: 0;
         z-index: 10;
@@ -1772,7 +1791,7 @@ textarea.form-message{
     footer .social{
         padding-bottom: 10px;
     }
-    
+
     .full-menu .full-inner nav ul li a {
         font-size: 32px;
     }
@@ -1793,7 +1812,7 @@ textarea.form-message{
     }
 
     .news-article .title {
-        font-size: 30px;        
+        font-size: 30px;
         line-height: 38px;
     }
 
@@ -1811,14 +1830,14 @@ textarea.form-message{
         padding: 16px;
     }
 
-    .portfolio .portfolio-filter {    
+    .portfolio .portfolio-filter {
         margin-top: 0;
         margin-bottom: 15px;
         float: left;
-        transform: rotate(0); 
+        transform: rotate(0);
         margin-bottom: 32px;
         margin-left: 5px;
-        position: relative; 
+        position: relative;
         left: 0;
         top: 0;
         z-index: 10;
@@ -1879,7 +1898,7 @@ textarea.form-message{
     .full-menu .full-inner nav ul li a {
         font-size: 27px;
     }
-  
+
     footer .copyright{
         text-align: center;
     }
@@ -1952,7 +1971,7 @@ textarea.form-message{
     }
 
     .portfolio-hero .hero-inner .information li {
-        line-height: 28px;    
+        line-height: 28px;
         text-align: center;
         width: 100%;
     }
@@ -1995,18 +2014,5 @@ textarea.form-message{
         padding-bottom: 60px;
     }
 
-  
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
