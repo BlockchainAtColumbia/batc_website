@@ -377,6 +377,16 @@ header{
     margin: 20px 17px;
 }
 
+/* Mission Statement */
+.mission-statement{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.grey-line {
+    border-bottom: 3px solid #b7b7b7;
+    margin-bottom: 24px;
+}
 
 
 /*------------------------ 2.1 Portfolio Section ------------------------*/
@@ -1621,6 +1631,11 @@ textarea.form-message{
         padding-bottom: 10px;
     }
 
+    .mission-statement {
+        width: 90%;
+        margin-left: 5%;
+    }
+
     .cont {
         width: 90%;
         margin-left: 5%;
@@ -1714,6 +1729,11 @@ textarea.form-message{
     .home .home-content p {
         font-size: 20px;
         margin-top: 24px;
+    }
+
+    .mission-statement {
+        width: 90%;
+        margin-left: 5%;
     }
 
     .cont {
