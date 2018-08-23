@@ -378,7 +378,7 @@ header{
 }
 
 /* Mission Statement */
-.mission-statement{
+.mission-statement {
     width: 70%;
     margin-left: 15%;
 }
@@ -388,6 +388,11 @@ header{
     margin-bottom: 24px;
 }
 
+.events-calendar {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
 
 /*------------------------ 2.1 Portfolio Section ------------------------*/
 
