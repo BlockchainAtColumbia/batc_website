@@ -212,7 +212,7 @@ header{
 
 
 .subtitle{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -1173,7 +1173,7 @@ footer .getintouch strong{
 .about .clients .client {
     height: 200px;
     display: table;
-    opacity: .5;
+    opacity: .7;
 }
 
 .about .clients .client:hover{
@@ -1203,12 +1203,19 @@ footer .getintouch strong{
 }
 
 .card {
-  max-width: 310.5px;
+  max-width: 250.5px;
   text-align: center;
 }
 
 .card-title {
   font-weight: 600;
+  font-size: 18px;
+
+}
+
+.card-subtitle {
+    font-weight: 400;
+    font-size: 14px;
 }
 
 /*------------------------ News Page ------------------------*/
