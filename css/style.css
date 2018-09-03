@@ -1218,6 +1218,16 @@ footer .getintouch strong{
     font-size: 14px;
 }
 
+.calendar-card-deck {
+    padding: 50px;
+    justify-content: space-evenly;
+}
+
+.calendar-card {
+    max-width: 800.5px;
+  text-align: center;
+}
+
 /*------------------------ News Page ------------------------*/
 
 
