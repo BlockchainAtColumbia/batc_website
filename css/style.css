@@ -216,6 +216,11 @@ header{
     font-weight: bold;
 }
 
+.body{
+    font-size: 22px;
+    font-weight: 400;
+}
+
 .site-btn{
     font-size: 15px;
     font-weight: 600;
