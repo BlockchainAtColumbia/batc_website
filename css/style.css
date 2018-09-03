@@ -1659,7 +1659,8 @@ textarea.form-message{
     }
 
     .mission-statement {
-        width: 90%;
+        font-size: 20px
+        width: 85%;
         margin-left: 5%;
     }
 
