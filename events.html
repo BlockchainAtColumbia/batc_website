@@ -71,7 +71,7 @@
                         <a href="tech.html">Tech</a>
                     </li>
                     <li>
-                        <a href="operations.html">Events</a>
+                        <a href="events.html">Events</a>
                     </li>
                     <li>
                         <a href="https://medium.com/blockchain-at-columbia">Medium Blog</a>
@@ -117,11 +117,12 @@
                 <div class="cont">
                     <div class="col-md-8 offset-md-2">
                         <h1 class="title">Events</h1>
-                        <p>The operations division is responsible for facilitating the vast array of events held at B@C, which includes speaking events, panels, lectures, career fairs, hackathons, and much more. </p>
-                        <!--<ul class="information">
-                            <li>CLIENT: DRIBBBLE.COM</li>
-                            <li>DATE: 8 MARCH 2018</li>
-                            <li>DATE: ART, RETOUCH, PHOTOGRAPHY</li>-->
+                        <p>The operations division is responsible for facilitating the vast array of events held at B@C, which
+                            includes speaking events, panels, lectures, career fairs, hackathons, and much more. </p>
+                        <ul class="information">
+                            <li>
+                                <a href="https://www.facebook.com/pg/BlockchainatColumbia/events/">Facebook Calendar</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -129,32 +130,14 @@
         </div>
 
         <div class="cont">
-            <section class="portfolio-single type-2 top_90">
-                <h2 class="title">Curated Interactions</h2>
+            <section class="portfolio-single type-2 top_90 event-list">
+                <h2 class="title">Blockchain at Columbia Events</h2>
                 <h3 class="subtitle bottom_30">Throughout the campus and the city</h3>
-                <p>We help bring industry leaders and opportunities to the Columbia community. Previous events include the Kadena founders talk and a Women in Blockchain panel featuring female leaders in the blockchain space.
-
-                <div class="portfolio-images top_60 row">
-                    <figure class="col-md-12 bottom_30">
-                        <img src="images/portfolio/work-2/01.jpg" alt="">
-                    </figure>
-                    <figure class="col-md-12 bottom_30">
-                        <img src="images/portfolio/work-2/02.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="col-md-12">
-                    <h3 class="subtitle">Procees</h3>
-                    <p>Shooting (first photo was used for upper body and hands, second photo for lower body,
-                        <br> wheels was mad in 3D)</p>
-                </div>
-                <div class="portfolio-images top_60 row">
-                    <figure class="col-md-12 bottom_30">
-                        <img src="images/portfolio/work-2/03.gif" alt="">
-                    </figure>
-                    <figure class="col-md-12 bottom_30">
-                        <img src="images/portfolio/work-2/04.gif" alt="">
-                    </figure>
-                </div>
+                <p>We help bring industry leaders and opportunities to the Columbia community. Previous events include the Kadena
+                    founders talk and a Women in Blockchain panel featuring female leaders in the blockchain space.
+                <hr>
+                <h2 class="title" style="margin: 35px 0 24px 0;">Latest Events</h2>
+                <div id="events" class="row"></div>
 
             </section>
 
@@ -202,6 +185,38 @@
 
     <!-- Javascripts -->
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $.get("https://batc-api.herokuapp.com/fb-events", function (res) {
+            var obj = JSON.parse(res);
+            var data = obj.data;
+            
+            // test poopulating
+            for (var j = 0; j < 7; j++)
+                obj.data.push(data[0]);
+
+            for (var i = 0; i < data.length; i++) {
+                var name = data[i].name;
+                var desc = data[i].description;
+                var cover = data[i].cover.source;
+                var place = data[i].place.name;
+                var time = new Date(data[i].start_time);
+                var id = data[i].id;
+                var elem = 
+                `<div class="card col-md-3 col-sm-4 col-xs-6">
+                    <img class="card-img-top" src="${cover}" alt="Card image cap" style="max-width: 300px;max-height: 160px;">
+                    <div class="card-body" style="padding: 10px 0px 10px 0px;">
+                        <h5 class="card-title">${name}</h5>
+                        <p class="card-text" style="font-size: 15px; line-height: 20px;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">${desc}</p>
+                        <p class="card-text" style="font-size: 15px; line-height: 20px;">${place}</p>
+                        <p class="card-text" style="font-size: 15px; line-height: 20px;">${time.toLocaleString()}</p>
+                        <a href="https://www.facebook.com/events/${id}/" class="btn btn-primary" target="_blank">view</a>
+                    </div>
+                </div>`;
+                
+                $("#events").append(elem);
+            }
+        });
+    </script>
     <script src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/jquery.hover3d.js"></script>
