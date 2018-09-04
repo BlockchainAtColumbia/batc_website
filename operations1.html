@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Blockchain at Columbia | Education</title>
+    <title>Blockchain at Columbia</title>
     <meta charset="UTF-8">
     <meta name="description" content="Gorge Portfolio Template">
     <meta name="keywords" content="personal, portfolio">
@@ -24,7 +24,32 @@
     <link rel="stylesheet" href="icon-fonts/fontawesome-5.0.6/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="icon-fonts/flaticon/flaticon.css" />
     <link rel="shortcut icon" href="images/logo/min-tp.png" />
+    <style type="text/css">
+    a
+    {
+      text-decoration: none;
+      color: black;
+    }
 
+    a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+</style>
 
 </head>
 
@@ -71,7 +96,7 @@
                         <a href="tech.html">Tech</a>
                     </li>
                     <li>
-                        <a href="events.html">Events</a>
+                        <a href="operations.html">Operations</a>
                     </li>
                     <li>
                         <a href="https://medium.com/blockchain-at-columbia">Medium Blog</a>
@@ -112,13 +137,13 @@
     <!-- SITE CONTENT -->
     <div class="wrapper">
         <!-- portfolio hero -->
-        <div class="portfolio-hero" style="background: url(images/tech.jpg);">
+        <div class="portfolio-hero" style="background: url(images/kadena2.jpg);">
             <div class="hero-inner">
                 <div class="cont">
                     <div class="col-md-8 offset-md-2">
-                        <h1 class="title">Technical Research & Development</h1>
-                        <p>The technical division’s mission is to provide a place for research, development, and discussion
-                          regarding blockchain and distributed ledger technologies. </p>
+                        <h1 class="title">Operations </h1>
+                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff
+                            that covered the whole of her lower arm towards the viewer.</p>
                         <!--<ul class="information">
                             <li>CLIENT: DRIBBBLE.COM</li>
                             <li>DATE: 8 MARCH 2018</li>
@@ -131,33 +156,67 @@
 
         <div class="cont">
             <section class="portfolio-single type-2 top_90">
-                <h2 class="title bottom_30">Solving the Future's Problems</h2>
-                <div class="portfolio-images top_30 row">
+                <h2 class="title">Key Art For Metra Development</h2>
+                <h3 class="subtitle bottom_30">Your bed room is so close to your
+                    <br> forest room</h3>
+                <p>Metra Development is leading the development and completion of a new sector - Metra Park is a brand new neighborhood
+                    in the prestigious part of Tbilisi. The houses are surrounded by pine trees and other evergreens. </p>
+                <p>Our aim was to emphasize the mixture of outdoor nature with environment of a young mans room, who enjoys
+                    active lifestyle. The print communicates the briefness of shortcut between comfy interior and green healthy
+                    exterior.</p>
+                    <!--<div class="events-calendar">
+                        <h2 class="classic-title">Events Calendar</h2>
+                        <br>
+                        <iframe src="https://calendar.google.com/calendar/embed?title=Blockchain%20at%20Columbia%20Event%20Schedule&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=columbia.edu_ivgn087ble9mhagvhdfisqmrds%40group.calendar.google.com&amp;color=%23ffffff&amp;ctz=America%2FNew_York"
+                            style="border:solid 0px #40e0d0" width="100%" height="500" frameborder="0" align="center" scrolling="no" font="times">
+                        </iframe>-->
+                  {% for event in events %}
+                        <div class="card-deck" style="padding:15px">
+                          <div class="card" style="max-width:800px;text-align:left;background-color:#AEDDED;border-color:#AEDDED;margin-bottom:5px;margin-top:5px">
+                            {% if 'link1' in event %}<a href="{{event.link1}}" style="text-decoration: none"> {% endif %}
+                            <div class="card-body">
+                              <h3>{{event.title1}}</h3>
+                              <h4 class="card-title" style="color:#636363">{{event.time1}}</h4>
+                              <h5 class="card-subtitle" style="font-size:18px;margin-bottom:15px">{{event.location1}}</h5>
+                              <h5 class="card-subtitle">{{event.body1}}</h5>
+                            {% if 'link1' in event %}</a>{% endif %}
+                            </div>
 
-                <h3 class="subtitle bottom_30 col-md-12">
-                  Tech Talks</h3>
-                  <div>
+                          </div>
+                          {% if 'card2' in event %}
+                          <div class="card" style="max-width:800px;text-align:left;background-color:#AEDDED;border-color:#AEDDED;margin-bottom:5px;margin-top:5px">
+                            {% if 'link2' in event %}<a href="{{event.link2}}" style="text-decoration: none"> {% endif %}
+                            <div class="card-body">
+                              <h3>{{event.title2}}</h3>
+                              <h4 class="card-title" style="color:#636363">{{event.time2}}</h4>
+                              <h5 class="card-subtitle" style="font-size:18px;margin-bottom:15px">{{event.location2}}</h5>
+                              <h5 class="card-subtitle">{{event.body2}}</h5>
+                            {% if 'link2' in event %}</a>{% endif %}
+                            </div>
 
-                    <p class="body col-md-12"><figure>
-                      <img src="images/techtalk3.jpg" style="max-width:300px;padding:0.15;float:right;margin-right:15px;margin-left:15px;" alt="">
-                    </figure><p class="body col-md-12">
-                      Our weekly technical conversations
-                      are targeted at an audience with a more advanced understanding of the space, but anyone willing to learn and ask insightful questions is welcome.
-                        Past technical conversation topics have included
-                        Decentralized Voting, Smart Contract Security, and Stablecoins.. In addition to weekly discussions,
-                        the tech division helps provide resources for in-house research and development projects.</p></div>
+                          </div>
+                          {% endif %}
+                        </div>
+                        {% endfor %}
 
-                <h3 class="subtitle bottom_30 col-md-12">
-                  Hackathons</h3>
-                  <div>
 
-                    <p class="body col-md-12"><figure>
-                      <img src="images/hackathon.jpg" style="max-width:300px;padding:0.15;float:left;margin-right:15px;margin-left:15px;" alt="">
+                <!--<div class="portfolio-images top_60 row">
+                    <figure class="col-md-12 bottom_30">
+                        <img src="images/portfolio/work-2/03.gif" alt="">
                     </figure>
-                    <p class="body col-md-12">
-                      B@C organizes and participates in several hackathons each year. The focus of these events is to foster collaboration and innovation among talented students at Columbia.</p></div>
+
+                    <figure class="col-md-12 bottom_30">
+                        <img src="images/portfolio/work-2/04.gif" alt="">
+                    </figure>
+                </div>-->
 
                 <!-- Portfolio Nav -->
+                <!--<div class="col-md-12 portfolio-nav text-center top_90">
+                    <a class="port-next" href="work-3.html">
+                        <div class="nav-title">next</div>
+                        <div class="next-title">Socialmedia design</div>
+                    </a>
+                </div>-->
 
             </section>
 
@@ -187,11 +246,14 @@
                         <a href="https://medium.com/blockchain-at-columbia">
                             <i class="fab fa-medium" aria-hidden="true"></i>
                         </a>
+                        <a href="#">
+                            <i class="fab fa-dribbble" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
                     <a href="#">
-                        <strong>Contact Us</strong>
+                        <strong>Get In Touch</strong>
                         <br>
                         <p>blockchain@columbia.edu</p>
                     </a>
