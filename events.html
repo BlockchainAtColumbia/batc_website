@@ -138,7 +138,7 @@
                     founders talk and a Women in Blockchain panel featuring female leaders in the blockchain space.
                 <hr>
                 <h2 class="title" style="margin: 35px 0 24px 0;">Latest Events</h2>
-                <div id="events" class="row"></div>
+                <div id="events" class="row">Loading...</div>
 
             </section>
 
@@ -191,6 +191,8 @@
             var obj = JSON.parse(res);
             var data = obj.data;
 
+            $( "#events" ).empty();
+            
             for (var i = 0; i < data.length && i < 10; i++) {
                 var name = data[i].name;
                 var desc = data[i].description;
@@ -199,14 +201,13 @@
                 var time = new Date(data[i].start_time);
                 var id = data[i].id;
                 var elem =
-                `<div class=" col-sm-4 col-xs-6" style="padding-right: 5px;">
+                `<div class="col-md-4 col-sm-6" style="padding-right: 5px;">
                     <div class="card" style="height: 480px;">
-                        <img class="card-img-top-two" src="${cover}" alt="Card image cap" style="max-width: 300px;max-height: 160px;">
-                        <div class="card-body" style="padding: 10px 0px 10px 0px;">
+                        <img class="card-img-top-two" src="${cover}" alt="Card image cap" style="max-height: 160px;">
+                        <div class="card-body" style="padding: 1rem;">
                             <h5 class="card-title">${name}</h5>
+                            <p class="card-text" style="font-size: 15px; line-height: 20px;">${place}<br>${time.toLocaleString()}</p>
                             <p class="card-text" style="font-size: 15px; line-height: 20px;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">${desc}</p>
-                            <p class="card-text" style="font-size: 15px; line-height: 20px;">${place}</p>
-                            <p class="card-text" style="font-size: 15px; line-height: 20px;">${time.toLocaleString()}</p>
                             <a href="https://www.facebook.com/events/${id}/" class="btn btn-primary" target="_blank">view</a>
                         </div>
                     </div>
