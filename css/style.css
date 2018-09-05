@@ -2063,3 +2063,9 @@ textarea.form-message{
 
 
 }
+
+.card-img-top-two {
+    height: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
