@@ -1208,9 +1208,9 @@ footer .getintouch strong{
 }
 
 .card {
-  /* max-width: 250.5px; */
   text-align: center;
   margin: 0 0px 20px 0px;
+  height: 480px;
 }
 
 .card-title {
@@ -2062,4 +2062,10 @@ textarea.form-message{
     }
 
 
+}
+
+.card-img-top-two {
+    height: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
 }
