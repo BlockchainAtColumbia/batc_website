@@ -1,8 +1,3 @@
-RewriteEngine on
-
-Options +MultiViews
-RewriteCond %{HTTP_HOST} ^blockchainatcolumbia\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.blockchainatcolumbia\.com$
-RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
-RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^/?$ "http\:\/\/blockchainatcolumbia\.com\/index" [R=301,L]
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
