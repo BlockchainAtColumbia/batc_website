@@ -1195,6 +1195,15 @@ footer .getintouch strong{
 .about .clients .client figure img{
     max-width: 50%;
 }
+.advisors {
+    max-width: 25%;
+}
+.officers {
+    max-width: 16%;
+}
+.executive {
+    max-width: 20%;
+}
 
 /*------------------------ Members Page ------------------------*/
 .members-type {
@@ -1716,7 +1725,9 @@ textarea.form-message{
     .portfolio-single.type-3 .title {
         font-size: 50px;
     }
-
+    .card{
+        max-width: 100%;
+    }
 }
 
 
@@ -1737,7 +1748,9 @@ textarea.form-message{
     .comment.reply{
         padding-left: 0 !important;
     }
-
+    .card{
+        max-width: 100%;
+    }
 }
 
 
@@ -1868,10 +1881,15 @@ textarea.form-message{
         height: 370px;
     }
 
+    .card{
+        width: 100%;
+    }
+
 }
 
 
 @media (max-width: 480px) {
+    
 
     header {
         padding: 16px;
@@ -2061,6 +2079,9 @@ textarea.form-message{
         padding-bottom: 60px;
     }
 
+    .card{
+        max-width: 100%;
+    }
 
 }
 
@@ -2070,3 +2091,4 @@ textarea.form-message{
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
 }
+
