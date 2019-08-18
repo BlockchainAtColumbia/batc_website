@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// Page Components
+import Header from './components/Header';
+import FullMenu from './components/FullMenu';
+import Home from './components/Home';
+import Mission from './components/Mission';
+import Portfolio from './components/Portfolio';
+import Partners from './components/Partners';
+import Footer from './components/Footer';
+
+// Data
+import data from './content';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <FullMenu menulinks={data.menulinks} contact={data.contact} />
+
+      <div className="wrapper">
+        <Home home={data.home} social={data.contact.social} />
+
+        <Mission mission={data.mission} />
+
+        <div className="cont">
+          <Portfolio portfolio={data.portfolio} />
+
+          <hr className="top_90 bottom_45 col-md-8" />
+
+          <Partners partners={data.partners} />
+        </div>
+      </div>
+      <Footer logo={data.logo} footer={data.footer} contact={data.contact} />
     </div>
+    
   );
 }
 
